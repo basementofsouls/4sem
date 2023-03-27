@@ -33,7 +33,7 @@
             this.errorProviderApp = new System.Windows.Forms.ErrorProvider(this.components);
             this.textBoxNum = new System.Windows.Forms.TextBox();
             this.hScrollBarSize_Scroll = new System.Windows.Forms.HScrollBar();
-            this.labelSize = new System.Windows.Forms.Label();
+            this.Размер = new System.Windows.Forms.Label();
             this.groupBoxType = new System.Windows.Forms.GroupBox();
             this.radioButtonService = new System.Windows.Forms.RadioButton();
             this.radioButtonClothes = new System.Windows.Forms.RadioButton();
@@ -63,16 +63,28 @@
             this.buttonLoad = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pricesortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.validatebutton = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).BeginInit();
             this.groupBoxType.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(92, 48);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxName.Location = new System.Drawing.Point(58, 82);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(154, 26);
+            this.textBoxName.Size = new System.Drawing.Size(137, 22);
             this.textBoxName.TabIndex = 0;
             this.textBoxName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxName_Validating);
             this.textBoxName.Validated += new System.EventHandler(this.textBoxName_Validated);
@@ -83,115 +95,108 @@
             // 
             // textBoxNum
             // 
-            this.textBoxNum.Location = new System.Drawing.Point(92, 94);
-            this.textBoxNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNum.Location = new System.Drawing.Point(58, 109);
             this.textBoxNum.Name = "textBoxNum";
-            this.textBoxNum.Size = new System.Drawing.Size(154, 26);
+            this.textBoxNum.Size = new System.Drawing.Size(137, 22);
             this.textBoxNum.TabIndex = 1;
             this.textBoxNum.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNum_Validating);
             this.textBoxNum.Validated += new System.EventHandler(this.textBoxNum_Validated);
             // 
             // hScrollBarSize_Scroll
             // 
-            this.hScrollBarSize_Scroll.Location = new System.Drawing.Point(39, 155);
+            this.hScrollBarSize_Scroll.Location = new System.Drawing.Point(12, 152);
             this.hScrollBarSize_Scroll.Name = "hScrollBarSize_Scroll";
-            this.hScrollBarSize_Scroll.Size = new System.Drawing.Size(232, 21);
+            this.hScrollBarSize_Scroll.Size = new System.Drawing.Size(206, 21);
             this.hScrollBarSize_Scroll.TabIndex = 2;
             this.hScrollBarSize_Scroll.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarSize_Scroll_Scroll);
             // 
-            // labelSize
+            // Размер
             // 
-            this.labelSize.AutoSize = true;
-            this.labelSize.Location = new System.Drawing.Point(135, 131);
-            this.labelSize.Name = "labelSize";
-            this.labelSize.Size = new System.Drawing.Size(73, 20);
-            this.labelSize.TabIndex = 3;
-            this.labelSize.Text = "labelSize";
+            this.Размер.AutoSize = true;
+            this.Размер.Location = new System.Drawing.Point(116, 136);
+            this.Размер.Name = "Размер";
+            this.Размер.Size = new System.Drawing.Size(57, 16);
+            this.Размер.TabIndex = 3;
+            this.Размер.Text = "Размер";
+            this.Размер.Click += new System.EventHandler(this.labelSize_Click);
             // 
             // groupBoxType
             // 
             this.groupBoxType.Controls.Add(this.radioButtonService);
             this.groupBoxType.Controls.Add(this.radioButtonClothes);
             this.groupBoxType.Controls.Add(this.radioButtonFood);
-            this.groupBoxType.Location = new System.Drawing.Point(39, 190);
-            this.groupBoxType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxType.Location = new System.Drawing.Point(13, 169);
             this.groupBoxType.Name = "groupBoxType";
-            this.groupBoxType.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxType.Size = new System.Drawing.Size(225, 151);
+            this.groupBoxType.Size = new System.Drawing.Size(200, 121);
             this.groupBoxType.TabIndex = 4;
             this.groupBoxType.TabStop = false;
-            this.groupBoxType.Text = "Type";
+            this.groupBoxType.Text = "Тип";
             this.groupBoxType.Leave += new System.EventHandler(this.groupBoxType_Leave);
             // 
             // radioButtonService
             // 
             this.radioButtonService.AutoSize = true;
-            this.radioButtonService.Location = new System.Drawing.Point(8, 119);
-            this.radioButtonService.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonService.Location = new System.Drawing.Point(7, 95);
             this.radioButtonService.Name = "radioButtonService";
-            this.radioButtonService.Size = new System.Drawing.Size(82, 24);
+            this.radioButtonService.Size = new System.Drawing.Size(74, 20);
             this.radioButtonService.TabIndex = 2;
             this.radioButtonService.TabStop = true;
-            this.radioButtonService.Text = "Service";
+            this.radioButtonService.Text = "Услуга";
             this.radioButtonService.UseVisualStyleBackColor = true;
             // 
             // radioButtonClothes
             // 
             this.radioButtonClothes.AutoSize = true;
-            this.radioButtonClothes.Location = new System.Drawing.Point(7, 74);
-            this.radioButtonClothes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonClothes.Location = new System.Drawing.Point(6, 59);
             this.radioButtonClothes.Name = "radioButtonClothes";
-            this.radioButtonClothes.Size = new System.Drawing.Size(84, 24);
+            this.radioButtonClothes.Size = new System.Drawing.Size(79, 20);
             this.radioButtonClothes.TabIndex = 1;
             this.radioButtonClothes.TabStop = true;
-            this.radioButtonClothes.Text = "Clothes";
+            this.radioButtonClothes.Text = "Одежда";
             this.radioButtonClothes.UseVisualStyleBackColor = true;
             // 
             // radioButtonFood
             // 
             this.radioButtonFood.AutoSize = true;
-            this.radioButtonFood.Location = new System.Drawing.Point(8, 28);
-            this.radioButtonFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonFood.Location = new System.Drawing.Point(7, 22);
             this.radioButtonFood.Name = "radioButtonFood";
-            this.radioButtonFood.Size = new System.Drawing.Size(67, 24);
+            this.radioButtonFood.Size = new System.Drawing.Size(55, 20);
             this.radioButtonFood.TabIndex = 0;
             this.radioButtonFood.TabStop = true;
-            this.radioButtonFood.Text = "Food";
+            this.radioButtonFood.Text = "Еда";
             this.radioButtonFood.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 48);
+            this.label1.Location = new System.Drawing.Point(8, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Name";
+            this.label1.Text = "Имя";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 98);
+            this.label2.Location = new System.Drawing.Point(-3, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Number";
+            this.label2.Text = "Номер";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(34, 384);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(31, 312);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBoxWeight
             // 
-            this.textBoxWeight.Location = new System.Drawing.Point(92, 418);
-            this.textBoxWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxWeight.Location = new System.Drawing.Point(83, 339);
             this.textBoxWeight.Name = "textBoxWeight";
-            this.textBoxWeight.Size = new System.Drawing.Size(154, 26);
+            this.textBoxWeight.Size = new System.Drawing.Size(137, 22);
             this.textBoxWeight.TabIndex = 8;
             this.textBoxWeight.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxWeight_Validating);
             this.textBoxWeight.Validated += new System.EventHandler(this.textBoxWeight_Validated);
@@ -199,38 +204,35 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 421);
+            this.label3.Location = new System.Drawing.Point(28, 342);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(31, 16);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Weight";
+            this.label3.Text = "Вес";
             // 
             // textBoxCount
             // 
-            this.textBoxCount.Location = new System.Drawing.Point(92, 452);
-            this.textBoxCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxCount.Location = new System.Drawing.Point(98, 366);
             this.textBoxCount.Name = "textBoxCount";
-            this.textBoxCount.Size = new System.Drawing.Size(154, 26);
+            this.textBoxCount.Size = new System.Drawing.Size(137, 22);
             this.textBoxCount.TabIndex = 10;
             this.textBoxCount.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCount_Validating);
             this.textBoxCount.Validated += new System.EventHandler(this.textBoxCount_Validated);
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(92, 488);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPrice.Location = new System.Drawing.Point(83, 395);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(154, 26);
+            this.textBoxPrice.Size = new System.Drawing.Size(137, 22);
             this.textBoxPrice.TabIndex = 11;
             this.textBoxPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPrice_Validating);
             this.textBoxPrice.Validated += new System.EventHandler(this.textBoxPrice_Validated);
             // 
             // textBoxProducer
             // 
-            this.textBoxProducer.Location = new System.Drawing.Point(92, 522);
-            this.textBoxProducer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxProducer.Location = new System.Drawing.Point(130, 420);
             this.textBoxProducer.Name = "textBoxProducer";
-            this.textBoxProducer.Size = new System.Drawing.Size(154, 26);
+            this.textBoxProducer.Size = new System.Drawing.Size(137, 22);
             this.textBoxProducer.TabIndex = 12;
             this.textBoxProducer.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxProducer_Validating);
             this.textBoxProducer.Validated += new System.EventHandler(this.textBoxProducer_Validated);
@@ -238,86 +240,83 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 456);
+            this.label4.Location = new System.Drawing.Point(-4, 369);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Count";
+            this.label4.Text = "Количество";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 488);
+            this.label5.Location = new System.Drawing.Point(28, 395);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.Size = new System.Drawing.Size(40, 16);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Price";
+            this.label5.Text = "Цена";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 522);
+            this.label6.Location = new System.Drawing.Point(8, 422);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 20);
+            this.label6.Size = new System.Drawing.Size(111, 16);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Producer";
+            this.label6.Text = "Производитель";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(135, 11);
+            this.label7.Location = new System.Drawing.Point(92, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 25);
+            this.label7.Size = new System.Drawing.Size(81, 25);
             this.label7.TabIndex = 16;
-            this.label7.Text = "GOOD";
+            this.label7.Text = "ТОВАР";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(598, 11);
+            this.label8.Location = new System.Drawing.Point(276, 55);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 25);
+            this.label8.Size = new System.Drawing.Size(203, 25);
             this.label8.TabIndex = 17;
-            this.label8.Text = "PRODUCER";
+            this.label8.Text = "ПРОИЗВОДИТЕЛЬ";
             // 
             // textBoxOrganization
             // 
-            this.textBoxOrganization.Location = new System.Drawing.Point(604, 48);
-            this.textBoxOrganization.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxOrganization.Location = new System.Drawing.Point(300, 92);
             this.textBoxOrganization.Name = "textBoxOrganization";
-            this.textBoxOrganization.Size = new System.Drawing.Size(154, 26);
+            this.textBoxOrganization.Size = new System.Drawing.Size(137, 22);
             this.textBoxOrganization.TabIndex = 18;
             this.textBoxOrganization.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxOrganization_Validating);
             this.textBoxOrganization.Validated += new System.EventHandler(this.textBoxOrganization_Validated);
             // 
             // textBoxCountry
             // 
-            this.textBoxCountry.Location = new System.Drawing.Point(604, 90);
-            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxCountry.Location = new System.Drawing.Point(300, 126);
             this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Size = new System.Drawing.Size(154, 26);
+            this.textBoxCountry.Size = new System.Drawing.Size(137, 22);
             this.textBoxCountry.TabIndex = 19;
             this.textBoxCountry.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCountry_Validating);
             this.textBoxCountry.Validated += new System.EventHandler(this.textBoxCountry_Validated);
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(604, 131);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxAddress.Location = new System.Drawing.Point(300, 158);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(154, 26);
+            this.textBoxAddress.Size = new System.Drawing.Size(137, 22);
             this.textBoxAddress.TabIndex = 20;
             this.textBoxAddress.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxAddress_Validating);
             this.textBoxAddress.Validated += new System.EventHandler(this.textBoxAddress_Validated);
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(604, 171);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPhone.Location = new System.Drawing.Point(300, 190);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(154, 26);
+            this.textBoxPhone.Size = new System.Drawing.Size(137, 22);
             this.textBoxPhone.TabIndex = 21;
             this.textBoxPhone.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPhone_Validating);
             this.textBoxPhone.Validated += new System.EventHandler(this.textBoxPhone_Validated);
@@ -325,83 +324,183 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(505, 51);
+            this.label9.Location = new System.Drawing.Point(204, 94);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 20);
+            this.label9.Size = new System.Drawing.Size(94, 16);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Organization";
+            this.label9.Text = "Организация";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(539, 90);
+            this.label10.Location = new System.Drawing.Point(242, 126);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 20);
+            this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Country";
+            this.label10.Text = "Страна";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(539, 131);
+            this.label11.Location = new System.Drawing.Point(244, 161);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 20);
+            this.label11.Size = new System.Drawing.Size(47, 16);
             this.label11.TabIndex = 24;
-            this.label11.Text = "Address";
+            this.label11.Text = "Адрес";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(546, 175);
+            this.label12.Location = new System.Drawing.Point(229, 190);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 20);
+            this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Phone";
+            this.label12.Text = "Телефон";
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(346, 205);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(309, 218);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(143, 50);
+            this.buttonSave.Size = new System.Drawing.Size(127, 40);
             this.buttonSave.TabIndex = 26;
-            this.buttonSave.Text = "SAVE";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSaveClick);
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(346, 263);
-            this.buttonLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonLoad.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(309, 270);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(143, 50);
+            this.buttonLoad.Size = new System.Drawing.Size(127, 40);
             this.buttonLoad.TabIndex = 27;
-            this.buttonLoad.Text = "LOAD";
-            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Text = "Вывести";
+            this.buttonLoad.UseVisualStyleBackColor = false;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(36, 360);
+            this.label13.Location = new System.Drawing.Point(33, 293);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 20);
+            this.label13.Size = new System.Drawing.Size(113, 16);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Delivery Date";
+            this.label13.Text = "Дата получения";
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(586, 206);
+            this.richTextBox.Location = new System.Drawing.Point(445, 82);
+            this.richTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(284, 344);
+            this.richTextBox.Size = new System.Drawing.Size(243, 330);
             this.richTextBox.TabIndex = 29;
             this.richTextBox.Text = "";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.aboutProgrammToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.TabIndex = 31;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 24);
+            this.toolStripMenuItem1.Text = "Поиск";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateToolStripMenuItem,
+            this.pricesortToolStripMenuItem,
+            this.nameToolStripMenuItem1});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(106, 24);
+            this.toolStripMenuItem2.Text = "Сортировка";
+            // 
+            // dateToolStripMenuItem
+            // 
+            this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dateToolStripMenuItem.Text = "Дата";
+            this.dateToolStripMenuItem.Click += new System.EventHandler(this.dateToolStripMenuItem_Click);
+            // 
+            // pricesortToolStripMenuItem
+            // 
+            this.pricesortToolStripMenuItem.Name = "pricesortToolStripMenuItem";
+            this.pricesortToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pricesortToolStripMenuItem.Text = "Цена";
+            this.pricesortToolStripMenuItem.Click += new System.EventHandler(this.pricesortToolStripMenuItem_Click);
+            // 
+            // nameToolStripMenuItem1
+            // 
+            this.nameToolStripMenuItem1.Name = "nameToolStripMenuItem1";
+            this.nameToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.nameToolStripMenuItem1.Text = "Имя";
+            this.nameToolStripMenuItem1.Click += new System.EventHandler(this.nameToolStripMenuItem1_Click);
+            // 
+            // aboutProgrammToolStripMenuItem
+            // 
+            this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
+            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.aboutProgrammToolStripMenuItem.Text = "О программе";
+            this.aboutProgrammToolStripMenuItem.Click += new System.EventHandler(this.aboutProgrammToolStripMenuItem_Click);
+            // 
+            // validatebutton
+            // 
+            this.validatebutton.Location = new System.Drawing.Point(309, 366);
+            this.validatebutton.Name = "validatebutton";
+            this.validatebutton.Size = new System.Drawing.Size(106, 67);
+            this.validatebutton.TabIndex = 32;
+            this.validatebutton.Text = "ВАЛИДАЦИЯ НОМЕРА";
+            this.validatebutton.UseVisualStyleBackColor = true;
+            this.validatebutton.Click += new System.EventHandler(this.validatebutton_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 493);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
+            this.statusStrip1.TabIndex = 33;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(214, 20);
+            this.toolStripStatusLabel1.Text = "Количество товаров в списке";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.validatebutton);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.buttonLoad);
@@ -428,16 +527,21 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxType);
-            this.Controls.Add(this.labelSize);
+            this.Controls.Add(this.Размер);
             this.Controls.Add(this.hScrollBarSize_Scroll);
             this.Controls.Add(this.textBoxNum);
             this.Controls.Add(this.textBoxName);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderApp)).EndInit();
             this.groupBoxType.ResumeLayout(false);
             this.groupBoxType.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,7 +553,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderApp;
         private System.Windows.Forms.TextBox textBoxNum;
         private System.Windows.Forms.HScrollBar hScrollBarSize_Scroll;
-        private System.Windows.Forms.Label labelSize;
+        private System.Windows.Forms.Label Размер;
         private System.Windows.Forms.GroupBox groupBoxType;
         private System.Windows.Forms.RadioButton radioButtonFood;
         private System.Windows.Forms.RadioButton radioButtonClothes;
@@ -479,6 +583,17 @@
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem dateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pricesortToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nameToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
+        private System.Windows.Forms.Button validatebutton;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
 

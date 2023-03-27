@@ -2,17 +2,19 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
-
+using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        public List<Good> goods_ = new List<Good>();
         private Good _good;
         private Producer _producer;
         public Form1(Good good, Producer producer)
@@ -20,8 +22,21 @@ namespace WindowsFormsApp2
             InitializeComponent();
             _good = good;
             _producer = producer;
+            using (var fs = new StreamReader("good.json"))
+            {
+               
+                while (!fs.EndOfStream)
+                {
+                    var json = fs.ReadLine();
 
-           
+                    var good_ = JsonConvert.DeserializeObject<Good>(json);
+
+                    goods_.Add(good_);
+                }
+
+
+            }
+            toolStripStatusLabel2.Text = goods_.Count().ToString();
 
         }
 
@@ -34,6 +49,7 @@ namespace WindowsFormsApp2
                 e.Cancel = true;
                 textBoxName.Select(0, textBoxName.Text.Length);
             }
+            if (textBoxName.Text == "") e.Cancel = false;
         }
 
         private void textBoxName_Validated(object sender, EventArgs e)
@@ -43,28 +59,30 @@ namespace WindowsFormsApp2
             errorProviderApp.SetError(textBoxName, "");
         }
 
+      
         private void textBoxNum_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxNum.Text))
             {
-                errorProviderApp.SetError(textBoxNum, "Number should not be left blank!");
+                errorProviderApp.SetError(textBoxNum, "Name should not be left blank!");
 
                 e.Cancel = true;
-                textBoxNum.Select(0, textBoxNum.Text.Length);
+                textBoxName.Select(0, textBoxNum.Text.Length);
             }
-            if (!int.TryParse(textBoxNum.Text, out _))
-            {
-                errorProviderApp.SetError(textBoxNum, "Pages should contain a number!");
-
-                e.Cancel = true;
-                textBoxNum.Select(0, textBoxNum.Text.Length);
-            }
+           
         }
 
         private void textBoxNum_Validated(object sender, EventArgs e)
         {
-            _good.Num = Convert.ToInt32(textBoxNum.Text);
+            try
+            {
+                _good.Num = Convert.ToInt32(textBoxNum.Text);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex.Message);
 
+            }
             errorProviderApp.SetError(textBoxNum, "");
         }
 
@@ -73,23 +91,23 @@ namespace WindowsFormsApp2
             switch ((int)(hScrollBarSize_Scroll.Value / 20))
             {
                 case 0:
-                    labelSize.Text = "Good size: small";
+                    Размер.Text = "Размер товара: мал.";
                     _good.Sizes = Good.GoodSizes.Small;
                     break;
                 case 1:
-                    labelSize.Text = "Good size: average";
+                    Размер.Text = "Размер товара: средн.";
                     _good.Sizes = Good.GoodSizes.Average;
                     break;
                 case 2:
-                    labelSize.Text = "Good size: big";
+                    Размер.Text = "Размер товара: больш.";
                     _good.Sizes = Good.GoodSizes.Big;
                     break;
                 case 3:
-                    labelSize.Text = "Good size: very big";
+                    Размер.Text = "Размер товара: очень больш.";
                     _good.Sizes = Good.GoodSizes.VeryBig;
                     break;
                 case 4:
-                    labelSize.Text = "Good size: huge";
+                    Размер.Text = "Размер товара: огромн.";
                     _good.Sizes = Good.GoodSizes.Huge;
                     break;
             }
@@ -127,6 +145,7 @@ namespace WindowsFormsApp2
                 e.Cancel = true;
                 textBoxWeight.Select(0, textBoxWeight.Text.Length);
             }
+            if (textBoxNum.Text == "") e.Cancel = false;
         }
 
         private void textBoxWeight_Validated(object sender, EventArgs e)
@@ -138,9 +157,11 @@ namespace WindowsFormsApp2
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if(dateTimePicker1.Value <= DateTime.Now)
-            _good.DateTime = dateTimePicker1.Value;
-            else{ MessageBox.Show("Check Date"); }
+            if (dateTimePicker1.Value <= DateTime.Now)
+            {
+                _good.DateTime = dateTimePicker1.Value;
+            }
+            else { MessageBox.Show("Check Date"); }
         }
 
         private void textBoxCount_Validating(object sender, CancelEventArgs e)
@@ -287,12 +308,20 @@ namespace WindowsFormsApp2
         {
             try
             {
-                string producerJSON = JsonSerializer.Serialize(_producer);
-                File.WriteAllText(@"../../../../producer.json", producerJSON);
-
-                string goodJSON = JsonSerializer.Serialize(_good);
-                File.WriteAllText(@"../../../../good.json", goodJSON);
-
+                using (var fs = new StreamWriter("producer.json", true))
+                {
+                    var json = JsonConvert.SerializeObject(_producer);
+                    fs.WriteLine(json);
+                }
+                _producer = new Producer();
+               
+                using (var fs = new StreamWriter("good.json", true))
+                {
+                    var json = JsonConvert.SerializeObject(_good);
+                    fs.WriteLine(json);
+                }
+                _good = new Good();
+              
                 return true;
             }
             catch (Exception ex)
@@ -309,6 +338,7 @@ namespace WindowsFormsApp2
                 if (Save())
                 {
                     MessageBox.Show("Saved successfully", "Saved");
+                    toolStripStatusLabel2.Text = (int.Parse(toolStripStatusLabel2.Text) + 1).ToString();
                 }
             }
         }
@@ -317,15 +347,51 @@ namespace WindowsFormsApp2
         {
             try
             {
-                string producerJSON = File.ReadAllText(@"../../../../producer.json");
-                _producer = JsonSerializer.Deserialize<Producer>(producerJSON);
+                List<Good> goods_ = new List<Good>();
+                List<Producer> producers_ = new List<Producer>();
+
+
+                using (var fs = new StreamReader("good.json"))
+                {
+
+                    while (!fs.EndOfStream)
+                    {
+                        var json = fs.ReadLine();
+
+                        var good_ = JsonConvert.DeserializeObject<Good>(json);
+                        richTextBox.Text += good_.ToString();
+                        goods_.Add(good_);
+                    }
+                    //foreach (var el in goods_)
+                    //{
+                        
+                    //    richTextBox.AppendText(el.Name.ToString());
+                    //    richTextBox.AppendText(el.Type.ToString());
+                    //    richTextBox.AppendText(el.Price.ToString());
+                    //}
+                }
+                
+
+                using (var fs = new StreamReader("producer.json"))
+                {
+
+                    while (!fs.EndOfStream)
+                    {
+                        var json = fs.ReadLine();
+
+                        var producer_ = JsonConvert.DeserializeObject<Producer>(json);
+                        //richTextBox.Text += producer_.ToString();
+                        producers_.Add(producer_);
+                    }
+                    //foreach (var el in producers_)
+                    //{
+                    //    richTextBox.AppendText(el.Organization.ToString());
+                    //}
+                }
                 textBoxOrganization.Text = _producer.Organization;
                 textBoxCountry.Text = _producer.Country;
                 textBoxAddress.Text = _producer.Address;
                 textBoxPhone.Text = _producer.Phone;
-
-                string goodJSON = File.ReadAllText(@"../../../../good.json");
-                _good = JsonSerializer.Deserialize<Good>(goodJSON);
                 switch (_good.Type)
                 {
                     case Good.Types.Food:
@@ -339,27 +405,27 @@ namespace WindowsFormsApp2
                         break;
                 }
                
-                dateTimePicker1.Value = _good.DateTime;
+                //dateTimePicker1.Value = _good.DateTime;
                 switch (_good.Sizes)
                 {
                     case Good.GoodSizes.Small:
-                        labelSize.Text = "File size: small";
+                        Размер.Text = "File size: small";
                         hScrollBarSize_Scroll.Value = 0;
                         break;
                     case Good.GoodSizes.Average:
-                        labelSize.Text = "File size: average";
+                        Размер.Text = "File size: average";
                         hScrollBarSize_Scroll.Value = 21;
                         break;
                     case Good.GoodSizes.Big:
-                        labelSize.Text = "File size: big";
+                        Размер.Text = "File size: big";
                         hScrollBarSize_Scroll.Value = 41;
                         break;
                     case Good.GoodSizes.VeryBig:
-                        labelSize.Text = "File size: very big";
+                        Размер.Text = "File size: very big";
                         hScrollBarSize_Scroll.Value = 61;
                         break;
                     case Good.GoodSizes.Huge:
-                        labelSize.Text = "File size: huge";
+                        Размер.Text = "File size: huge";
                         hScrollBarSize_Scroll.Value = 81;
                         break;
                 }
@@ -369,22 +435,110 @@ namespace WindowsFormsApp2
                 textBoxProducer.Text = _good.Producer;
                 textBoxCount.Text = _good.Count.ToString();
                 textBoxPrice.Text = _good.Price.ToString();
-                if (!richTextBox.Text.ToString().Contains(goodJSON))
-                {
-                    richTextBox.AppendText(producerJSON);
-                    richTextBox.AppendText(goodJSON);
-                    MessageBox.Show("Loaded successfully", "Error");
-                }
-                else
-                {
-                    MessageBox.Show("Good already exist");
-                }
+                //if (!richTextBox.Text.ToString().Contains())
+                //{
+                //    richTextBox.AppendText(producerJSON);
+                //    richTextBox.AppendText(goodJSON);
+                //    MessageBox.Show("Loaded successfully", "Error");
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Good already exist");
+                //}
+               
                 
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form2 search = new Form2();
+            search.Show();
+        }
+
+        private void dateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text = "";
+            var query = from el in goods_
+                        orderby el.DateTime
+                        select el;
+            foreach(var el in query)
+            {
+                richTextBox.Text += el.ToString();
+            }
+        }
+
+        private void nameToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text = "";
+            var query = from el in goods_
+                        orderby el.Name
+                        select el;
+            foreach (var el in query)
+            {
+                richTextBox.Text += el.ToString();
+            }
+        }
+
+        private void pricesortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text = "";
+            var query = from el in goods_
+                        orderby el.Price
+                        select el;
+            foreach (var el in query)
+            {
+                richTextBox.Text += el.ToString();
+            }
+        }
+
+        private void aboutProgrammToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Разработчик: Самсоник А.И.");
+        }
+
+        private void labelSize_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void validatebutton_Click(object sender, EventArgs e)
+        {
+
+            Good myClass = new Good();
+            try
+            {
+                myClass.Num = Convert.ToInt32(textBoxNum.Text);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex.Message);
+                return;
+            }
+
+            ValidationContext context = new ValidationContext(myClass, null, null);
+            try
+            {
+                Validator.ValidateObject(myClass, context, true);
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex.Message);
+                return;
+            }
+
+            // Если валидация прошла успешно, выводим сообщение об успехе.
+            MessageBox.Show("Валидация прошла успешно.");
         }
     }
 }
