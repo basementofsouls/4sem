@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_site_information_settings_alter().
+ */
+function my_module_form_system_site_information_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['site_information']['site_slogan']['#title'] = t('My custom slogan');
+  $form['site_information']['site_slogan']['#description'] = t('Enter your custom slogan here.');
+}

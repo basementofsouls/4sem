@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Contains Drupal\news\NewsBlock.
+ */
+
+namespace Drupal\news;
+
+use Drupal\Core\Block\BlockBase;
+
+/**
+ * Provides a 'News' block.
+ *
+ * @Block(
+ *   id = "news_block",
+ *   admin_label = @Translation("News block")
+ * )
+ */
+class NewsBlock extends BlockBase {
+/**
+ * Implements hook_block_info().
+ */
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    $build = [
+      '#markup' => '<h2>Latest News</h2>',
+    ];
+    return $build;
+  }
+
+  function news_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'news':
+      $block['subject'] = t('News');
+      $block['content'] = _news_get_news();
+      break;
+  }
+
+  return $block;
+}
+
+function _news_get_news() {
+  // Replace this with code to retrieve news from your database or another source.
+  $news = array(
+    array(
+      'title' => 'News 1',
+      'body' => 'This is the first news item.',
+    ),
+    array(
+      'title' => 'News 2',
+      'body' => 'This is the second news item.',
+    ),
+    array(
+      'title' => 'News 3',
+      'body' => 'This is the third news item.',
+    ),
+  );
+
+  $output = '';
+  foreach ($news as $item) {
+    $output .= '<h3>' . $item['title'] . '</h3>';
+    $output .= '<p>' . $item['body'] . '</p>';
+  }
+
+  return $output;
+}
+
+}

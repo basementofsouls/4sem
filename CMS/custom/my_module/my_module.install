@@ -1,0 +1,61 @@
+/**
+ * @file
+ * Install, update and uninstall functions for the Login History module.
+ */
+
+use Drupal\Core\Database\Database;
+use Drupal\Core\Database\DatabaseExceptionWrapper;
+
+
+function my_module_install() {
+  // Define the schema for the new table.
+  $schema['my_module_table'] = [
+    'description' => 'My custom table.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique ID for the table.',
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Name field for the table.',
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Email field for the table.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  // Create the new table.
+  try {
+    Database::getConnection()->schema()->createTable('my_module_table', $schema['my_module_table']);
+  } catch (DatabaseExceptionWrapper $e) {
+    drupal_set_message(t('An error occurred while creating the my_module_table table: @error', ['@error' => $e->getMessage()]), 'error');
+    return;
+  }
+
+  drupal_set_message(t('The my_module_table table has been created.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function my_module_uninstall() {
+  // Drop the table.
+  try {
+    Database::getConnection()->schema()->dropTable('my_module_table');
+  } catch (DatabaseExceptionWrapper $e) {
+    drupal_set_message(t('An error occurred while dropping the my_module_table table: @error', ['@error' => $e->getMessage()]), 'error');
+    return;
+  }
+
+  drupal_set_message(t('The my_module_table table has been dropped.'));
+}

@@ -1,0 +1,6 @@
+news.config:
+  title: 'News'
+  description: 'Configure News settings'
+  route_name: news.settings
+  parent: system.admin_config_services
+  weight: 100

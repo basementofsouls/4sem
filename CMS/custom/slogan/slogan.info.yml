@@ -1,0 +1,4 @@
+name: Slogan
+type: module
+description: 'My custom slogan'
+core_version_requirement: ^9 || ^10
