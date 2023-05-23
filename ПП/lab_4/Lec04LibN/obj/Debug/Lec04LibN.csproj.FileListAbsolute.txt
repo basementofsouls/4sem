@@ -1,0 +1,6 @@
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\bin\Debug\Lec04LibN.dll
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\bin\Debug\Lec04LibN.pdb
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\obj\Debug\Lec04LibN.csproj.AssemblyReference.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\obj\Debug\Lec04LibN.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\obj\Debug\Lec04LibN.dll
+C:\Users\Acer\Desktop\лабы\ПП\lab_4\Lec04LibN\obj\Debug\Lec04LibN.pdb

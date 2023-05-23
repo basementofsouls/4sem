@@ -1,0 +1,15 @@
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\bin\Debug\net6.0\lab_02.exe
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\bin\Debug\net6.0\lab_02.deps.json
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\bin\Debug\net6.0\lab_02.runtimeconfig.json
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\bin\Debug\net6.0\lab_02.dll
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\bin\Debug\net6.0\lab_02.pdb
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.csproj.AssemblyReference.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.AssemblyInfoInputs.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.AssemblyInfo.cs
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.dll
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\refint\lab_02.dll
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.pdb
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\lab_02.genruntimeconfig.cache
+C:\Users\Acer\Desktop\лабы\ПП\lab_02\lab_02\obj\Debug\net6.0\ref\lab_02.dll
