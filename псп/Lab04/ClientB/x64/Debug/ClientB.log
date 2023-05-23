@@ -1,0 +1,5 @@
+﻿  ClientB.cpp
+C:\Users\Acer\Desktop\лабы\ПСП\Lab04\ClientB\ClientB.cpp(63): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Errors.cpp
+  Создание кода...
+  ClientB.vcxproj -> C:\Users\Acer\Desktop\лабы\ПСП\Lab04\x64\Debug\ClientB.exe

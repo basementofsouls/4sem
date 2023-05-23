@@ -1,0 +1,3 @@
+﻿  ServerU.cpp
+E:\STUDY\Программирование сетевых приложений\Lab3\ServerU\ServerU.cpp(14,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  ServerU.vcxproj -> E:\STUDY\Программирование сетевых приложений\Lab3\Debug\ServerU.exe

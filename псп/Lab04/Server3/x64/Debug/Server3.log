@@ -1,0 +1,8 @@
+﻿  Errors.cpp
+  Server3.cpp
+C:\Users\Acer\Desktop\лабы\ПСП\Lab04\Server3\Server3.cpp(57,35): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+C:\Users\Acer\Desktop\лабы\ПСП\Lab04\Server3\Server3.cpp(65,33): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+C:\Users\Acer\Desktop\лабы\ПСП\Lab04\Server3\Server3.cpp(113,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Acer\Desktop\лабы\ПСП\Lab04\Server3\Server3.cpp(142): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
+  Server3.vcxproj -> C:\Users\Acer\Desktop\лабы\ПСП\Lab04\x64\Debug\Server3.exe

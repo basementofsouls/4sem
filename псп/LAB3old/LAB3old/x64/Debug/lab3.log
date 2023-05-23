@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\Users\Acer\Desktop\лабы\ПСП\LAB3old\LAB3old\Main.cpp(17,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Acer\Desktop\лабы\ПСП\LAB3old\LAB3old\Main.cpp(64): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  lab3.vcxproj -> C:\Users\Acer\Desktop\лабы\ПСП\LAB3old\LAB3old\x64\Debug\ServerU.exe

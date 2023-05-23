@@ -1,0 +1,4 @@
+D:\курс_2\Сем2\ПСП\lab3\x64\Debug\ServerU.exe
+C:\Users\Stanislaw\Desktop\ПСП\LABS\LAB3\x64\Debug\ServerU.exe
+C:\Users\Stanislaw\Desktop\ПСП\LABS\LAB3old\x64\Debug\ServerU.exe
+C:\Users\Acer\Desktop\лабы\ПСП\LAB3old\LAB3old\x64\Debug\ServerU.exe
