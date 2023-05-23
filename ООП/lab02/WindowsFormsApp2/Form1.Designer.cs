@@ -70,7 +70,6 @@
             this.pricesortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.validatebutton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -86,8 +85,6 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(137, 22);
             this.textBoxName.TabIndex = 0;
-            this.textBoxName.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxName_Validating);
-            this.textBoxName.Validated += new System.EventHandler(this.textBoxName_Validated);
             // 
             // errorProviderApp
             // 
@@ -99,8 +96,6 @@
             this.textBoxNum.Name = "textBoxNum";
             this.textBoxNum.Size = new System.Drawing.Size(137, 22);
             this.textBoxNum.TabIndex = 1;
-            this.textBoxNum.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNum_Validating);
-            this.textBoxNum.Validated += new System.EventHandler(this.textBoxNum_Validated);
             // 
             // hScrollBarSize_Scroll
             // 
@@ -198,8 +193,6 @@
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(137, 22);
             this.textBoxWeight.TabIndex = 8;
-            this.textBoxWeight.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxWeight_Validating);
-            this.textBoxWeight.Validated += new System.EventHandler(this.textBoxWeight_Validated);
             // 
             // label3
             // 
@@ -216,8 +209,6 @@
             this.textBoxCount.Name = "textBoxCount";
             this.textBoxCount.Size = new System.Drawing.Size(137, 22);
             this.textBoxCount.TabIndex = 10;
-            this.textBoxCount.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCount_Validating);
-            this.textBoxCount.Validated += new System.EventHandler(this.textBoxCount_Validated);
             // 
             // textBoxPrice
             // 
@@ -225,8 +216,6 @@
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(137, 22);
             this.textBoxPrice.TabIndex = 11;
-            this.textBoxPrice.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPrice_Validating);
-            this.textBoxPrice.Validated += new System.EventHandler(this.textBoxPrice_Validated);
             // 
             // textBoxProducer
             // 
@@ -234,8 +223,6 @@
             this.textBoxProducer.Name = "textBoxProducer";
             this.textBoxProducer.Size = new System.Drawing.Size(137, 22);
             this.textBoxProducer.TabIndex = 12;
-            this.textBoxProducer.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxProducer_Validating);
-            this.textBoxProducer.Validated += new System.EventHandler(this.textBoxProducer_Validated);
             // 
             // label4
             // 
@@ -291,8 +278,6 @@
             this.textBoxOrganization.Name = "textBoxOrganization";
             this.textBoxOrganization.Size = new System.Drawing.Size(137, 22);
             this.textBoxOrganization.TabIndex = 18;
-            this.textBoxOrganization.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxOrganization_Validating);
-            this.textBoxOrganization.Validated += new System.EventHandler(this.textBoxOrganization_Validated);
             // 
             // textBoxCountry
             // 
@@ -300,8 +285,6 @@
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(137, 22);
             this.textBoxCountry.TabIndex = 19;
-            this.textBoxCountry.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxCountry_Validating);
-            this.textBoxCountry.Validated += new System.EventHandler(this.textBoxCountry_Validated);
             // 
             // textBoxAddress
             // 
@@ -309,8 +292,6 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(137, 22);
             this.textBoxAddress.TabIndex = 20;
-            this.textBoxAddress.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxAddress_Validating);
-            this.textBoxAddress.Validated += new System.EventHandler(this.textBoxAddress_Validated);
             // 
             // textBoxPhone
             // 
@@ -318,8 +299,6 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(137, 22);
             this.textBoxPhone.TabIndex = 21;
-            this.textBoxPhone.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxPhone_Validating);
-            this.textBoxPhone.Validated += new System.EventHandler(this.textBoxPhone_Validated);
             // 
             // label9
             // 
@@ -409,14 +388,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(874, 30);
             this.menuStrip1.TabIndex = 31;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 26);
             this.toolStripMenuItem1.Text = "Поиск";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -427,46 +406,36 @@
             this.pricesortToolStripMenuItem,
             this.nameToolStripMenuItem1});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(106, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(106, 26);
             this.toolStripMenuItem2.Text = "Сортировка";
             // 
             // dateToolStripMenuItem
             // 
             this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.dateToolStripMenuItem.Text = "Дата";
             this.dateToolStripMenuItem.Click += new System.EventHandler(this.dateToolStripMenuItem_Click);
             // 
             // pricesortToolStripMenuItem
             // 
             this.pricesortToolStripMenuItem.Name = "pricesortToolStripMenuItem";
-            this.pricesortToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pricesortToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.pricesortToolStripMenuItem.Text = "Цена";
             this.pricesortToolStripMenuItem.Click += new System.EventHandler(this.pricesortToolStripMenuItem_Click);
             // 
             // nameToolStripMenuItem1
             // 
             this.nameToolStripMenuItem1.Name = "nameToolStripMenuItem1";
-            this.nameToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.nameToolStripMenuItem1.Size = new System.Drawing.Size(128, 26);
             this.nameToolStripMenuItem1.Text = "Имя";
             this.nameToolStripMenuItem1.Click += new System.EventHandler(this.nameToolStripMenuItem1_Click);
             // 
             // aboutProgrammToolStripMenuItem
             // 
             this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
-            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
             this.aboutProgrammToolStripMenuItem.Text = "О программе";
             this.aboutProgrammToolStripMenuItem.Click += new System.EventHandler(this.aboutProgrammToolStripMenuItem_Click);
-            // 
-            // validatebutton
-            // 
-            this.validatebutton.Location = new System.Drawing.Point(309, 366);
-            this.validatebutton.Name = "validatebutton";
-            this.validatebutton.Size = new System.Drawing.Size(106, 67);
-            this.validatebutton.TabIndex = 32;
-            this.validatebutton.Text = "ВАЛИДАЦИЯ НОМЕРА";
-            this.validatebutton.UseVisualStyleBackColor = true;
-            this.validatebutton.Click += new System.EventHandler(this.validatebutton_Click);
             // 
             // statusStrip1
             // 
@@ -476,15 +445,15 @@
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 493);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(874, 26);
             this.statusStrip1.TabIndex = 33;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(214, 20);
-            this.toolStripStatusLabel1.Text = "Количество товаров в списке";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(152, 20);
+            this.toolStripStatusLabel1.Text = "Последнее действие";
             // 
             // toolStripStatusLabel2
             // 
@@ -497,9 +466,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.ClientSize = new System.Drawing.Size(874, 519);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.validatebutton);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.label13);
@@ -590,7 +558,6 @@
         private System.Windows.Forms.ToolStripMenuItem pricesortToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nameToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
-        private System.Windows.Forms.Button validatebutton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;

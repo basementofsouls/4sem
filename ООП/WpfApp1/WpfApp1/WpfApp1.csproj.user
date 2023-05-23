@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AllProducts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\Input.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\SearchButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AllProducts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Customstyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DarkTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ENG.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RU.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\CustomButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Input.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\SearchButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WhiteTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

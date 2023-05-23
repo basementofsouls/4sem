@@ -1,0 +1,57 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:VisualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core" x:Class="WpfApp1.AddProduct"
+        mc:Ignorable="d"
+        Icon="/roll.png"
+        Title="AddProduct" Height="484" Width="806">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Customstyle.xaml"/>
+                <ResourceDictionary Source="Eng.xaml"/>
+                <ResourceDictionary Source="RU.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+    </Window.Resources>
+    <Grid Margin="0,87,0,0" Style="{DynamicResource mainback}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Style="{DynamicResource header}" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="800" Orientation="Horizontal" Margin="3,-85,0,0">
+            <Image Height="93" Width="100" Source="/roll.png" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <Label x:Name="SushiRoom" Style ="{DynamicResource logo}" Content="Sushi Room" VerticalContentAlignment="Center" FontFamily="Bahnschrift Condensed" FontSize="50" FontWeight="DemiBold" FontStretch="SemiExpanded" FontStyle="Italic" BorderThickness="100,0,0,0"/>
+            <Button x:Name="rus" Style="{StaticResource Lang}" Content="{DynamicResource Rus}" Height="47" Width="82" Click="button_rus" Margin="100,0,0,0"/>
+            <Button x:Name="eng" Style="{StaticResource Lang}" Content="{DynamicResource Eng}" Height="47" Width="82" Click="button_eng" Margin="20,0,0,0"/>
+
+        </StackPanel>
+        <TextBox x:Name="textBox_Name" Style="{StaticResource txtbox}" HorizontalAlignment="Left" Margin="33,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Background="#FFEEEEEE" FontFamily="Agency FB" Height="27" BorderThickness="0,0,0,4" />
+        <TextBox x:Name="textBox_Description" Style="{StaticResource txtbox}" HorizontalAlignment="Left" Margin="33,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Background="#FFEEEEEE" FontFamily="Agency FB" Height="27" BorderThickness="0,0,0,4" />
+        <TextBox x:Name="textBox_Price" Style="{StaticResource txtbox}" HorizontalAlignment="Left" Margin="33,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Background="#FFEEEEEE" FontFamily="Agency FB" Height="27" BorderThickness="0,0,0,4" />
+        <TextBox x:Name="textBox_Rating" Style="{StaticResource txtbox}" HorizontalAlignment="Left" Margin="33,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Background="#FFEEEEEE" FontFamily="Agency FB" Height="27" BorderThickness="0,0,0,4" />
+        <Image x:Name="product_Image" HorizontalAlignment="Left" Height="174" Margin="570,49,0,0" VerticalAlignment="Top" Width="174"/>
+        <Button x:Name="load_image" Content="{DynamicResource EnterImage}" Style="{StaticResource Multi}" HorizontalAlignment="Left" Margin="551,253,0,0" VerticalAlignment="Top" Click="loadimage" FontWeight="Normal" Width="200" Height="29" Background="#FF5DB7FF"/>
+
+        <Button  x:Name="Savebutton" Content="{DynamicResource AddProd}" HorizontalAlignment="Left" Margin="337,313,0,0" VerticalAlignment="Top" Width="169" Height="52" FontFamily="Arial Black" FontSize="16" Background="#FF28FF00" BorderBrush="#FF115600" Click="Click_Save"/>
+        <Button x:Name="clean_button" Content="{DynamicResource Clear}" Style ="{StaticResource trig}" HorizontalAlignment="Left" Height="52" Margin="141,313,0,0" VerticalAlignment="Top" Width="136" FontWeight="Bold" Click="Clean" MouseUp="clean_button_MouseUp" Background="#FF2196F3"/>
+        <TextBlock Style="{DynamicResource CustomTextBlockStyle}" HorizontalAlignment="Left" Margin="33,28,0,0" TextWrapping="Wrap" Text="{DynamicResource EnterName}" VerticalAlignment="Top"/>
+        <TextBlock Style="{DynamicResource CustomTextBlockStyle}" HorizontalAlignment="Left" Margin="33,81,0,0" TextWrapping="Wrap" Text="{DynamicResource EnterDescription}" VerticalAlignment="Top"/>
+        <TextBlock Style="{DynamicResource CustomTextBlockStyle}" HorizontalAlignment="Left" Margin="33,124,0,0" TextWrapping="Wrap" Text="{DynamicResource EnterPrice}" VerticalAlignment="Top"/>
+        <TextBlock Style="{DynamicResource CustomTextBlockStyle}" HorizontalAlignment="Left" Margin="33,174,0,0" TextWrapping="Wrap" Text="{DynamicResource EnterRaiting}" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,220,0,0" Height="93">
+            
+            <TextBlock Style ="{StaticResource CustomTextBlockStyleData}" TextWrapping="Wrap" Text="{DynamicResource EnterCategory}"/>
+            <ComboBox Name="Category_product" Style="{StaticResource cmbbox}" ItemsSource= "{Binding MyCollections}" DisplayMemberPath="." Width="120"  SelectedIndex="0"
+           />
+            <CheckBox Name="cbSample" Content="Complite" />
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -80,7 +80,7 @@ namespace WindowsFormsApp2
 			else if (name == "" && type != "" && regex.IsMatch(type) && price1 == 0 && price2 == 0)
 			{
 				var query = from el in goods_
-							where (int)el.Type == int.Parse(type)
+							where el.Type.ToString() == type
 							select el;
 
 				foreach (var el in query)
@@ -122,7 +122,7 @@ namespace WindowsFormsApp2
 			else if (name != "" && type != "" && regex.IsMatch(type) && regex.IsMatch(name) && price1 == 0 && price2 == 0)
 			{
 				var query = from el in goods_
-							where (int)el.Type == int.Parse(type) && el.Name.Contains(name)
+                            where el.Type.ToString() == type && el.Name.Contains(name)
 							select el;
 
 				foreach (var el in query)
@@ -145,7 +145,7 @@ namespace WindowsFormsApp2
 			else if (name != "" && type != "" && regex.IsMatch(type) && regex.IsMatch(name) && price2 != 0)
 			{
 				var query = from el in goods_
-							where (int)el.Type == int.Parse(type) && el.Name.Contains(name) && el.Price >= price1 && el.Price <= price2
+							where el.Type.ToString() == type && el.Name.Contains(name) && el.Price >= price1 && el.Price <= price2
 							select el;
 
 				foreach (var el in query)
@@ -191,7 +191,7 @@ namespace WindowsFormsApp2
 			else if (name == "" && type != "" && regex.IsMatch(type) && price2 != 0)
 			{
 				var query = from el in goods_
-							where (int)el.Type == int.Parse(type) && el.Price >= price1 && el.Price <= price2
+							where el.Type.ToString() == type && el.Price >= price1 && el.Price <= price2
 							select el;
 
 				foreach (var el in query)
@@ -233,10 +233,10 @@ namespace WindowsFormsApp2
 
 		private void TypeSearch_Validating(object sender, CancelEventArgs e)
 		{
-			if (!TypeSearch.Text.Contains('2') && !TypeSearch.Text.Contains('1') && !TypeSearch.Text.Contains('0'))
+			if (!TypeSearch.Text.Contains("Clothes") && !TypeSearch.Text.Contains("Food") && !TypeSearch.Text.Contains("Service"))
 			{
 
-				errorProviderApp.SetError(TypeSearch, "Тип может быть только 0, 1 или 2");
+				errorProviderApp.SetError(TypeSearch, "Тип может быть только Clothes, Food или Service ");
 
 				e.Cancel = true;
 
