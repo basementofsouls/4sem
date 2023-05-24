@@ -138,7 +138,7 @@ void GetServer(char* call, short port, struct sockaddr* from, int* flen)
 
 		all.sin_family = AF_INET;
 		all.sin_port = htons(port);
-		all.sin_addr.s_addr = inet_addr("127.255.255.255");;
+		all.sin_addr.s_addr = inet_addr("127.255.255.255");
 
 		if (sendto(cC, call, strlen(call) + 1, NULL, (sockaddr*)&all, sizeof(all)) == SOCKET_ERROR)
 			throw SetErrorMsgText("sendto:", WSAGetLastError());
