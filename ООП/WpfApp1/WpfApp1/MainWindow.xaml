@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:custom="clr-namespace:WpfApp1.UserControls"
+        xmlns:My="clr-namespace:WpfApp1.Class"
         mc:Ignorable="d"
         Icon="/roll.png"
         Title="SushiRoom" Height="450" Width="800">
-   
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static My:CustomCommands.OpenFile}" Executed="OpenFileExecuted" />
+    </Window.CommandBindings>
     <Window.Resources>
         
         <ResourceDictionary>
@@ -37,6 +40,9 @@
             <ToggleButton x:Name="toggle" Content="Theme" IsChecked="False" Height="53" Width="49" Checked="ToggleButton_Checked" Unchecked="toggle_Unchecked" />
         </StackPanel>
 
-
+        <Button Width="100"
+                    Cursor="Hand"
+                    Command="{x:Static My:CustomCommands.OpenFile}"
+                    Content="Open" Margin="350,353,350,34" />
     </Grid>
 </Window>

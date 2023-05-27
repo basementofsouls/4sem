@@ -36,7 +36,7 @@ void main() {
 
 		sockaddr from;
 		int length = sizeof(from);
-		GetServerByName("tolik", "Hello", &from, &length);
+		GetServerByName("dollof-cthulhu", "Hello", &from, &length);
 
 
 		if (closesocket(cS) == SOCKET_ERROR)

@@ -353,11 +353,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\лабы\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\лабы\\лабочки\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\лабы\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+      "projectPath": "C:\\Users\\Acer\\Desktop\\лабы\\лабочки\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\лабы\\ООП\\WpfApp1\\WpfApp1\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Desktop\\лабы\\лабочки\\ООП\\WpfApp1\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

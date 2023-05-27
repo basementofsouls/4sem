@@ -17,6 +17,7 @@ using System.IO;
 using System.ComponentModel;
 using Newtonsoft.Json.Linq;
 using WpfApp1.UserControls;
+using Microsoft.Win32;
 
 namespace WpfApp1
 {
@@ -152,6 +153,15 @@ namespace WpfApp1
             else
             {
                 input.BorderBrush = Brushes.Black ;
+            }
+        }
+        private void OpenFileExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Open file command executed!");
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // обработка открытого файла
             }
         }
     }

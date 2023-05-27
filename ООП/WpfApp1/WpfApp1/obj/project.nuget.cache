@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EzdVR0F+J+Jf4HPq8QRMW4VpXq3n4pmr9Quc5BsWtcDXlk/zYc9vSlsp37p7cl5wXiA9icZD09aLTxtVj0hGWQ==",
+  "dgSpecHash": "8IcqXbZyZlqOcBITT4Wxjzfq2XygusdRqUZUX/dR1Zylh9/OCoVik4hHr9WhSL1akgLT9zHeUPDKphHafEDAaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\лабы\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\Desktop\\лабы\\лабочки\\ООП\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\dotimaging.bitmapsourceinterop\\4.8.3\\dotimaging.bitmapsourceinterop.4.8.3.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\dotimaging.genericimage\\4.8.3\\dotimaging.genericimage.4.8.3.nupkg.sha512",

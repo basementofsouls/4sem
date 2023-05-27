@@ -1,5 +1,5 @@
 ﻿  ServerB.cpp
-C:\Users\Acer\Desktop\лабы\ПСП\Laba 5\ServerB\ServerB.cpp(19,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-C:\Users\Acer\Desktop\лабы\ПСП\Laba 5\ServerB\ServerB.cpp(30,7): warning C4101: ibuf: неиспользованная локальная переменная
-C:\Users\Acer\Desktop\лабы\ПСП\Laba 5\ServerB\ServerB.cpp(28,6): warning C4101: lobuf: неиспользованная локальная переменная
-  ServerB.vcxproj -> C:\Users\Acer\Desktop\лабы\ПСП\Laba 5\ServerB\Debug\ServerB.exe
+C:\Users\Acer\Desktop\лабы\лабочки\псп\Laba 5\ServerB\ServerB.cpp(19,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Acer\Desktop\лабы\лабочки\псп\Laba 5\ServerB\ServerB.cpp(30,7): warning C4101: ibuf: неиспользованная локальная переменная
+C:\Users\Acer\Desktop\лабы\лабочки\псп\Laba 5\ServerB\ServerB.cpp(28,6): warning C4101: lobuf: неиспользованная локальная переменная
+  ServerB.vcxproj -> C:\Users\Acer\Desktop\лабы\лабочки\псп\Laba 5\ServerB\Debug\ServerB.exe

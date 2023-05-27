@@ -54,7 +54,7 @@ void main() {
 		serv.sin_family = AF_INET;
 		serv.sin_port = htons(2000);
 		/*serv.sin_addr.s_addr = inet_addr("127.0.0.1");*/
-		serv.sin_addr.s_addr = inet_addr("192.168.36.155");
+		serv.sin_addr.s_addr = inet_addr("192.168.71.155");
 
 		if (bind(cS, (LPSOCKADDR)&serv, sizeof(serv)) == SOCKET_ERROR)
 			throw SetErrorMsgText("bind:", WSAGetLastError());
