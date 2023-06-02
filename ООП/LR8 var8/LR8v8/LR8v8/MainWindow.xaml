@@ -1,0 +1,179 @@
+﻿<Window x:Class="LR8v8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LR8v8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="460" Width="800"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <TabControl>
+            <TabItem Header="Товар">
+                <Grid Background="#FFE5E5E5" Height="408">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="149*"/>
+                        <ColumnDefinition Width="140*"/>
+                        <ColumnDefinition Width="505*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <WrapPanel HorizontalAlignment="Center">
+
+                        <Button x:Name="ButtonImage" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="-6.335,-2.752" Height="132" Width="127" Click="Button_Click">
+                            <Button.Background>
+                                <ImageBrush x:Name="ButtonImaheImageBrush" ImageSource="/resources/Placeholder.png"/>
+                            </Button.Background>
+                        </Button>
+
+                        <Label Content="размер (int)"/>
+                        <TextBox x:Name="TextBoxSize" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxSize_TextChanged"/>
+                        <Label Content="вес (int)" Width="51"/>
+                        <TextBox x:Name="TextBoxWeight" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxWeight_TextChanged"/>
+                        <Label Content="тип" Width="44"/>
+                        <TextBox x:Name="TextBoxType" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxType_TextChanged"/>
+                        <StackPanel Margin="0,20,0,0">
+                            <Label>ID объекта</Label>
+                            <TextBox x:Name="TextBoxEditId" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxEditId_TextChanged"/>
+                            <Button x:Name="ButtonDeleteProduct" Content="Удалить" Width="120" Margin="0,10,0,0" Click="Button_Click_1"/>
+                            <Button x:Name="ButtonEditProduct" Content="Изменить" Width="120" Margin="0,10,0,0" Click="ButtonEditProduct_Click"/>
+                        </StackPanel>
+                    </WrapPanel>
+
+                    <WrapPanel Grid.Column="1" HorizontalAlignment="Center">
+                        <Label>Название</Label>
+                        <TextBox x:Name="TextBoxName" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxName_TextChanged"/>
+                        <Label>Количество (int)</Label>
+                        <TextBox x:Name="TextBoxAmount" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxAmount_TextChanged"/>
+                        <Label>Цена (int)</Label>
+                        <TextBox x:Name="TextBoxPrice" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxPrice_TextChanged"/>
+                        <Label>Производитель (ID)</Label>
+                        <TextBox x:Name="TextBoxManufacturer" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxManufacturer_TextChanged"/>
+                        <Label>Кладовщик (ID)</Label>
+                        <TextBox x:Name="TextBoxStorekeeper" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="TextBoxStorekeeper_TextChanged"/>
+                        <Label>Дата поступления</Label>
+                        <DatePicker x:Name="DatePickerDate" VerticalAlignment="Center" Width="118"/>
+
+                        <Button x:Name="AddProduct" Content="Добавить" Margin="0,69,0,0" Width="120" Click="AddProduct_Click"/>
+                    </WrapPanel>
+
+                    <ListBox Grid.Column="2"
+                             x:Name="ProductListBox"
+                             d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,50"
+                             >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Margin="5">
+                                    <Image Width="100" Height="75" Source="{Binding Path=Image}" />
+                                    <WrapPanel>
+                                        <StackPanel Margin="10,0,0,0">
+                                            <Label>Id</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Id}" HorizontalAlignment="Center" />
+                                            <Label>Name</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Name}" HorizontalAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,0,0">
+                                            <Label>Price</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Price}" HorizontalAlignment="Center" />
+                                            <Label>Amount</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Amount}" HorizontalAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,0,0">
+                                            <Label>Size</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Size}" HorizontalAlignment="Center" />
+                                            <Label>Weight</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=Weight}" HorizontalAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,0,0">
+                                            <Label>ManufacturerId</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=ManufacturerId}" HorizontalAlignment="Center" />
+                                            <Label>StorekeeperId</Label>
+                                            <TextBlock FontSize="8" Text="{Binding Path=StorekeeperId}" HorizontalAlignment="Center" />
+                                        </StackPanel>
+                                    </WrapPanel>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+
+                    <Button Content="Сортировать по Id" Grid.Column="2" Margin="0,363,380,23" Click="Button_Click_2"/>
+                    <Button Content="Сортировать по Цене" Grid.Column="2" Margin="144,363,230,23" Click="Button_Click_3"/>
+                    <Button Content="Поиск" Grid.Column="2" Margin="293,363,81,23" Click="Button_Click_Show"/>
+                    <Button Grid.Column="2" Content="Процедура" HorizontalAlignment="Left" Margin="435,365,0,0" VerticalAlignment="Top" Click="Button_Click_5"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Производитель">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="125*"/>
+                        <ColumnDefinition Width="140*"/>
+                        <ColumnDefinition Width="505*"/>
+                    </Grid.ColumnDefinitions>
+                    <WrapPanel Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="9,0,0,0">
+                        <Label>Производитель</Label>
+                        <TextBox x:Name="TextBoxOrganization" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxOrganization_TextChanged" />
+                        <Label>Страна</Label>
+                        <TextBox x:Name="TextBoxCity" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxCity_TextChanged" />
+                        <Label Content="Адрес"/>
+                        <TextBox x:Name="TextBoxAdress" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxAdress_TextChanged" />
+                        <Label>Телефон (int)</Label>
+                        <TextBox x:Name="TextBoxPhone" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxPhone_TextChanged" />
+                        <Button x:Name="ButtonAddManufacturer" Content="Добавить" Margin="0,10,0,0" Width="120" Click="ButtonAddManufacturer_Click"/>
+                    </WrapPanel>
+                    <WrapPanel Grid.Column="3" HorizontalAlignment="Center">
+                        <Label>Идентификатор (id)</Label>
+                        <TextBox x:Name="TextBoxManufacturerId" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxManufacturerId_TextChanged" />
+                        <Button x:Name="ButtonEditManufacturer" Content="Изменить" Margin="0,10,0,0" Width="120" Click="ButtonEditManufacturer_Click"/>
+                        <Button x:Name="ButtonDeleteManufacturer" Content="Удалить" Margin="0,10,0,0" Width="120" Click="ButtonDeleteManufacturer_Click"/>
+                    </WrapPanel>
+                    <WrapPanel Grid.Column="4">
+                        <DataGrid x:Name="DataGridManufacturer" Grid.Column="2" AutoGenerateColumns="True" Margin="0,10,0,0" VerticalAlignment="Top" Height="270" Width="495"/>
+                        <Button x:Name="ButtonWatchManufacturers" Content="Поиск" Margin="0,10,0,0" Width="120" Click="ButtonWatchManufacturers_Click"></Button>
+                    </WrapPanel>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Кладовщик">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="149*"/>
+                        <ColumnDefinition Width="140*"/>
+                        <ColumnDefinition Width="505*"/>
+                    </Grid.ColumnDefinitions>
+                    <WrapPanel Grid.Column="0" HorizontalAlignment="Center">
+                        <Label>ФИО</Label>
+                        <TextBox x:Name="TextBoxFIO" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxFIO_TextChanged"  />
+                        <Label>Адресс</Label>
+                        <TextBox x:Name="TextBoxAdressSrorekeeper" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxAdressSrorekeeper_TextChanged"  />
+                        <Label>Опыт</Label>
+                        <TextBox x:Name="TextBoxExperience" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxExperience_TextChanged"  />
+                        <Button x:Name="ButtonAddStorekeeper" Content="Добавить" Margin="0,10,0,0" Width="120" Click="ButtonAddStorekeeper_Click" />
+                    </WrapPanel>
+                    <WrapPanel Grid.Column="1" HorizontalAlignment="Center">
+                        <Label>Идентификатор (id)</Label>
+                        <TextBox x:Name="TextBoxStorekeeperId" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBoxStorekeeperId_TextChanged" />
+                        <Button x:Name="ButtonEditStorekeeper" Content="Изменить" Margin="0,10,0,0" Width="120" Click="ButtonEditStorekeeper_Click" />
+                        <Button x:Name="ButtonDeleteStorekeeper" Content="Удалить" Margin="0,10,0,0" Width="120" Click="ButtonDeleteStorekeeper_Click" />
+                    </WrapPanel>
+                    <WrapPanel Grid.Column="2">
+                        <DataGrid x:Name="DataGridStorekeeperr" Grid.Column="2" AutoGenerateColumns="True" Margin="0,10,0,10" VerticalAlignment="Top" Height="270" Width="495"/>
+                        <Button Content="Поиск" x:Name="ButtonWatchStorekeepers" Width="122" Click="ButtonWatchStorekeepers_Click"></Button>
+                    </WrapPanel>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Запросы">
+                <WrapPanel>
+                    <Label>Запрос</Label>
+                    <TextBox x:Name="CustomQuery" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="794" TextChanged="TextBox_TextChanged"/>
+                    <Button Content="Выполнить запрос" RenderTransformOrigin="0.251,1.899" Margin="0,10,0,0" Click="Button_Click_4"></Button>
+                </WrapPanel>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
