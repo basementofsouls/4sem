@@ -1,0 +1,42 @@
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.exe.config
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.exe
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.pdb
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.AssemblyReference.cache
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.SuggestedBindingRedirects.cache
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\Views\MainView.baml
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\Views\MainView.g.cs
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\App.g.cs
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11_MarkupCompile.cache
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.g.resources
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9_11.Properties.Resources.resources
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.GenerateResource.cache
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.CopyComplete
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.exe
+C:\Users\Acer\Downloads\Telegram Desktop\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.pdb
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.exe.config
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.exe
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\LR9-11.pdb
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.AssemblyReference.cache
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.SuggestedBindingRedirects.cache
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\Views\MainView.baml
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\Views\MainView.g.cs
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\App.g.cs
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11_MarkupCompile.cache
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.g.resources
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9_11.Properties.Resources.resources
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR11.csproj.CopyComplete
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.exe
+C:\Users\Acer\Desktop\лабы\лабочки\ООП\LR9-11v8\LR9-11v8\LR9-11v8\LR11\obj\Debug\LR9-11.pdb
